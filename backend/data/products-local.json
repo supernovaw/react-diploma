@@ -4,8 +4,8 @@
         "category": 13,
         "title": "Кроссовки как у Pharrell Williams",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pharrell_williams_sneakers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pharrell_williams_sneakers_2.jpg"
+          "http://localhost:3000/img/products/pharrell_williams_sneakers.jpg",
+          "http://localhost:3000/img/products/pharrell_williams_sneakers_2.jpg"
         ],
         "sku": "1000000",
         "manufacturer": "Chanel",
@@ -32,8 +32,8 @@
         "category": 13,
         "title": "Туфли принцессы",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/princess_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/princess_shoes_2.jpg"
+          "http://localhost:3000/img/products/princess_shoes.jpg",
+          "http://localhost:3000/img/products/princess_shoes_2.jpg"
         ],
         "sku": "1000001",
         "manufacturer": "Dolce & Gabbana",
@@ -59,7 +59,7 @@
         "category": 13,
         "title": "Туфли с окошечками",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_with_windows.jpg"
+          "http://localhost:3000/img/products/shoes_with_windows.jpg"
         ],
         "sku": "1000002",
         "manufacturer": "Dolce & Gabbana",
@@ -85,8 +85,8 @@
         "category": 13,
         "title": "Кеды с насекомым",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/insect_sneakers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/insect_sneakers_2.jpg"
+          "http://localhost:3000/img/products/insect_sneakers.jpg",
+          "http://localhost:3000/img/products/insect_sneakers_2.jpg"
         ],
         "sku": "1000003",
         "manufacturer": "Dolce & Gabbana",
@@ -112,8 +112,8 @@
         "category": 13,
         "title": "Туфли на выход",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/outgoing_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/outgoing_shoes_2.jpg"
+          "http://localhost:3000/img/products/outgoing_shoes.jpg",
+          "http://localhost:3000/img/products/outgoing_shoes_2.jpg"
         ],
         "sku": "1000004",
         "manufacturer": "Dolce & Gabbana",
@@ -139,8 +139,8 @@
         "category": 13,
         "title": "Туфли императрицы",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/empress's_slippers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/empress's_slippers_2.jpg"
+          "http://localhost:3000/img/products/empress's_slippers.jpg",
+          "http://localhost:3000/img/products/empress's_slippers_2.jpg"
         ],
         "sku": "1000005",
         "manufacturer": "Dolce & Gabbana",
@@ -166,7 +166,7 @@
         "category": 14,
         "title": "Кроссовки с рынка",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_from_the_market.jpg"
+          "http://localhost:3000/img/products/sneakers_from_the_market.jpg"
         ],
         "sku": "1000006",
         "manufacturer": "Dolce & Gabbana",
@@ -192,7 +192,7 @@
         "category": 14,
         "title": "Кроссовки пёстрые",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/colorful_sneakers.jpg"
+          "http://localhost:3000/img/products/colorful_sneakers.jpg"
         ],
         "sku": "1000007",
         "manufacturer": "Chanel",
@@ -219,8 +219,8 @@
         "category": 13,
         "title": "Туфли-долматинцы",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/dalmatian_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/dalmatian_shoes_2.jpg"
+          "http://localhost:3000/img/products/dalmatian_shoes.jpg",
+          "http://localhost:3000/img/products/dalmatian_shoes_2.jpg"
         ],
         "sku": "1000008",
         "manufacturer": "Chanel",
@@ -246,8 +246,8 @@
         "category": 13,
         "title": "Сапоги на показ",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/transparent_boots.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/transparent_boots_2.jpg"
+          "http://localhost:3000/img/products/transparent_boots.jpg",
+          "http://localhost:3000/img/products/transparent_boots_2.jpg"
         ],
         "sku": "1000009",
         "manufacturer": "Chanel",
@@ -273,8 +273,8 @@
         "category": 13,
         "title": "Сапоги блестящие",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shiny_boots.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shiny_boots_2.jpg"
+          "http://localhost:3000/img/products/shiny_boots.jpg",
+          "http://localhost:3000/img/products/shiny_boots_2.jpg"
         ],
         "sku": "1000010",
         "manufacturer": "Chanel",
@@ -300,8 +300,8 @@
         "category": 13,
         "title": "Туфли как у Кэрри",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_like_carrie.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_like_carrie_2.jpg"
+          "http://localhost:3000/img/products/shoes_like_carrie.jpg",
+          "http://localhost:3000/img/products/shoes_like_carrie_2.jpg"
         ],
         "sku": "1000011",
         "manufacturer": "Manolo Blahnik",
@@ -327,9 +327,9 @@
         "category": 14,
         "title": "Кеды от Оксимирона",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_from_oksimiron.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_from_oksimiron_2.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_from_oksimiron_3.jpg"
+          "http://localhost:3000/img/products/sneakers_from_oksimiron.jpg",
+          "http://localhost:3000/img/products/sneakers_from_oksimiron_2.jpg",
+          "http://localhost:3000/img/products/sneakers_from_oksimiron_3.jpg"
         ],
         "sku": "1000012",
         "manufacturer": "Reebok",
@@ -355,8 +355,8 @@
         "category": 13,
         "title": "Знаменитые лабутэны",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/tufli_labuten.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/tufli_labuten_2.jpg"
+          "http://localhost:3000/img/products/tufli_labuten.jpg",
+          "http://localhost:3000/img/products/tufli_labuten_2.jpg"
         ],
         "sku": "1000013",
         "manufacturer": "Christian Louboutin",
@@ -382,8 +382,8 @@
         "category": 13,
         "title": "Туфли с шипами",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/spiked_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/spiked_shoes_2.jpg"
+          "http://localhost:3000/img/products/spiked_shoes.jpg",
+          "http://localhost:3000/img/products/spiked_shoes_2.jpg"
         ],
         "sku": "1000014",
         "manufacturer": "Christian Louboutin",
@@ -409,8 +409,8 @@
         "category": 14,
         "title": "Кеды классические",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/сlassic_sneakers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/сlassic_sneakers_2.jpg"
+          "http://localhost:3000/img/products/classic_sneakers.jpg",
+          "http://localhost:3000/img/products/classic_sneakers_2.jpg"
         ],
         "sku": "1000015",
         "manufacturer": "Vans",
@@ -437,7 +437,7 @@
         "category": 14,
         "title": "Кроссовки Новый Баланс ",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/new_balance_sneakers.jpg"
+          "http://localhost:3000/img/products/new_balance_sneakers.jpg"
         ],
         "sku": "1000016",
         "manufacturer": "New Balance",
@@ -463,8 +463,8 @@
         "category": 13,
         "title": "Кроссовки с мехом",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_with_fur.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_with_fur_2.jpg"
+          "http://localhost:3000/img/products/sneakers_with_fur.jpg",
+          "http://localhost:3000/img/products/sneakers_with_fur_2.jpg"
         ],
         "sku": "1000017",
         "manufacturer": "New Balance",
@@ -490,8 +490,8 @@
         "category": 13,
         "title": "Кроссовки для девчонок",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_for_girls.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_for_girls_2.jpg"
+          "http://localhost:3000/img/products/sneakers_for_girls.jpg",
+          "http://localhost:3000/img/products/sneakers_for_girls_2.jpg"
         ],
         "sku": "1000018",
         "manufacturer": "New Balance",
@@ -517,7 +517,7 @@
         "category": 15,
         "title": "Кроссовки для маленьких девчонок",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_for_little_girls.jpg"
+          "http://localhost:3000/img/products/sneakers_for_little_girls.jpg"
         ],
         "sku": "1000019",
         "manufacturer": "New Balance",
@@ -543,9 +543,9 @@
         "category": 13,
         "title": "Нюдовые туфли",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/nude_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/nude_shoes_2.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/nude_shoes_3.jpg"
+          "http://localhost:3000/img/products/nude_shoes.jpg",
+          "http://localhost:3000/img/products/nude_shoes_2.jpg",
+          "http://localhost:3000/img/products/nude_shoes_3.jpg"
         ],
         "sku": "1000020",
         "manufacturer": "ASOS",
@@ -571,7 +571,7 @@
         "category": 12,
         "title": "Ботинки охотника",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/hunter's_boots.jpg"
+          "http://localhost:3000/img/products/hunter's_boots.jpg"
         ],
         "sku": "1000021",
         "manufacturer": "Timberland",
@@ -597,8 +597,8 @@
         "category": 13,
         "title": "Сапоги охотницы",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/huntress_boots.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/huntress_boots_2.jpg"
+          "http://localhost:3000/img/products/huntress_boots.jpg",
+          "http://localhost:3000/img/products/huntress_boots_2.jpg"
         ],
         "sku": "100002",
         "manufacturer": "Hunter",
@@ -625,8 +625,8 @@
         "category": 13,
         "title": "Лодочки",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pumps.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pumps_2.jpg"
+          "http://localhost:3000/img/products/pumps.jpg",
+          "http://localhost:3000/img/products/pumps_2.jpg"
         ],
         "sku": "1000023",
         "manufacturer": "Estro",
@@ -652,7 +652,7 @@
         "category": 13,
         "title": "Рыжики",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/rufous.jpg"
+          "http://localhost:3000/img/products/rufous.jpg"
         ],
         "sku": "1000024",
         "manufacturer": "ALDO",
@@ -678,7 +678,7 @@
         "category": 13,
         "title": "Диор в рубчик",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/ribbed_dior.jpg"
+          "http://localhost:3000/img/products/ribbed_dior.jpg"
         ],
         "sku": "1000025",
         "manufacturer": "Dior",
@@ -704,8 +704,8 @@
         "category": 13,
         "title": "Кружевыне туфли",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/lace_up_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/lace_up_shoes_2.jpg"
+          "http://localhost:3000/img/products/lace_up_shoes.jpg",
+          "http://localhost:3000/img/products/lace_up_shoes_2.jpg"
         ],
         "sku": "1000026",
         "manufacturer": "Dior",
@@ -731,8 +731,8 @@
         "category": 13,
         "title": "Рыбацкая сетка",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/fishing_net.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/fishing_net_2.jpg"
+          "http://localhost:3000/img/products/fishing_net.jpg",
+          "http://localhost:3000/img/products/fishing_net_2.jpg"
         ],
         "sku": "1000027",
         "manufacturer": "Dior",
@@ -758,7 +758,7 @@
         "category": 13,
         "title": "LOVE",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/love.jpg"
+          "http://localhost:3000/img/products/love.jpg"
         ],
         "sku": "1000028",
         "manufacturer": "Dior",
@@ -784,7 +784,7 @@
         "category": 13,
         "title": "Туфли Жар-птицы",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/firebird_slippers.jpg"
+          "http://localhost:3000/img/products/firebird_slippers.jpg"
         ],
         "sku": "1000029",
         "manufacturer": "Dior",
@@ -810,8 +810,8 @@
         "category": 13,
         "title": "Туфли c крыьями",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_with_wings.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_with_wings_2.jpg"
+          "http://localhost:3000/img/products/shoes_with_wings.jpg",
+          "http://localhost:3000/img/products/shoes_with_wings_2.jpg"
         ],
         "sku": "1000030",
         "manufacturer": "Zanotti",
@@ -838,8 +838,8 @@
         "category": 12,
         "title": "Ботинки для настоящих мужчин",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/boots_for_real_men.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/boots_for_real_men_2.jpg"
+          "http://localhost:3000/img/products/boots_for_real_men.jpg",
+          "http://localhost:3000/img/products/boots_for_real_men_2.jpg"
         ],
         "sku": "1000031",
         "manufacturer": "Zanotti",
@@ -865,8 +865,8 @@
         "category": 13,
         "title": "Больше крыльев",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/more_wings.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/more_wings_2.jpg"
+          "http://localhost:3000/img/products/more_wings.jpg",
+          "http://localhost:3000/img/products/more_wings_2.jpg"
         ],
         "sku": "1000032",
         "manufacturer": "Zanotti",
@@ -892,8 +892,8 @@
         "category": 14,
         "title": "Туфли султана",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sultan's_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sultan's_shoes_2.jpg"
+          "http://localhost:3000/img/products/sultan's_shoes.jpg",
+          "http://localhost:3000/img/products/sultan's_shoes_2.jpg"
         ],
         "sku": "1000033",
         "manufacturer": "ALEXANDER MCQUEEN",
@@ -919,8 +919,8 @@
         "category": 15,
         "title": "Кеды-зебра",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/zebra_sneakers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/zebra_sneakers_2.jpg"
+          "http://localhost:3000/img/products/zebra_sneakers.jpg",
+          "http://localhost:3000/img/products/zebra_sneakers_2.jpg"
         ],
         "sku": "1000034",
         "manufacturer": "OFF-WHITE",
@@ -946,8 +946,8 @@
         "category": 14,
         "title": "Кроссовки обычные",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/regular_sneakers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/regular_sneakers_2.jpg"
+          "http://localhost:3000/img/products/regular_sneakers.jpg",
+          "http://localhost:3000/img/products/regular_sneakers_2.jpg"
         ],
         "sku": "1000035",
         "manufacturer": "SWEAR",
@@ -973,8 +973,8 @@
         "category": 12,
         "title": "Шлепанцы с тисненым логотипом",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip-flops_with_embossed_logo.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip-flops_with_embossed_logo_2.jpg"
+          "http://localhost:3000/img/products/flip-flops_with_embossed_logo.jpg",
+          "http://localhost:3000/img/products/flip-flops_with_embossed_logo_2.jpg"
         ],
         "sku": "1000036",
         "manufacturer": "GIVENCHY",
@@ -1000,8 +1000,8 @@
         "category": 14,
         "title": "Блестящий ковбой",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip-shiny_cowboy.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip-shiny_cowboy_2.jpg"
+          "http://localhost:3000/img/products/flip-shiny_cowboy.jpg",
+          "http://localhost:3000/img/products/flip-shiny_cowboy_2.jpg"
         ],
         "sku": "1000037",
         "manufacturer": "JIMMY CHOO",
@@ -1027,8 +1027,8 @@
         "category": 12,
         "title": "Розовый бунтарь",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pink_rebel.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pink_rebel_2.jpg"
+          "http://localhost:3000/img/products/pink_rebel.jpg",
+          "http://localhost:3000/img/products/pink_rebel_2.jpg"
         ],
         "sku": "1000038",
         "manufacturer": "GUIDI",
@@ -1055,8 +1055,8 @@
         "category": 14,
         "title": "В стиле нюд",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/nude.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/nude_2.jpg"
+          "http://localhost:3000/img/products/nude.jpg",
+          "http://localhost:3000/img/products/nude_2.jpg"
         ],
         "sku": "1000039",
         "manufacturer": "GUCCI",
@@ -1082,8 +1082,8 @@
         "category": 13,
         "title": "Лоферы мечты",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/dream_loafers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/dream_loafers_2.jpg"
+          "http://localhost:3000/img/products/dream_loafers.jpg",
+          "http://localhost:3000/img/products/dream_loafers_2.jpg"
         ],
         "sku": "1000040",
         "manufacturer": "SERGIO ROSSI",
@@ -1109,8 +1109,8 @@
         "category": 15,
         "title": "Баленсиага",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/balenciaga.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/balenciaga_2.jpg"
+          "http://localhost:3000/img/products/balenciaga.jpg",
+          "http://localhost:3000/img/products/balenciaga_2.jpg"
         ],
         "sku": "1000041",
         "manufacturer": "BALENCIAGA",
@@ -1136,8 +1136,8 @@
         "category": 13,
         "title": "Неодизайн",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/neodesign.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/neodesign_2.jpg"
+          "http://localhost:3000/img/products/neodesign.jpg",
+          "http://localhost:3000/img/products/neodesign_2.jpg"
         ],
         "sku": "1000042",
         "manufacturer": "REIKE NEN",
@@ -1163,8 +1163,8 @@
         "category": 13,
         "title": "Ботильоны со шнурком",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/lace-up_ankle_boots.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/lace-up_ankle_boots_2.jpg"
+          "http://localhost:3000/img/products/lace-up_ankle_boots.jpg",
+          "http://localhost:3000/img/products/lace-up_ankle_boots_2.jpg"
         ],
         "sku": "1000043",
         "manufacturer": "OFF-WHITE",
@@ -1190,8 +1190,8 @@
         "category": 13,
         "title": "Без задника",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/backless.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/backless_2.jpg"
+          "http://localhost:3000/img/products/backless.jpg",
+          "http://localhost:3000/img/products/backless_2.jpg"
         ],
         "sku": "1000044",
         "manufacturer": "MANSUR GAVRIEL",
@@ -1217,8 +1217,8 @@
         "category": 15,
         "title": "Босоножки 'Keira'",
         "images": [
-            "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sandals_keira.jpg",
-            "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sandals_keira_2.jpg"
+            "http://localhost:3000/img/products/sandals_keira.jpg",
+            "http://localhost:3000/img/products/sandals_keira_2.jpg"
         ],
         "sku": "1000045",
         "manufacturer": "DOLCE & GABBANA",
@@ -1245,8 +1245,8 @@
         "category": 13,
         "title": "Босоножки 'Myer' с завязкой на щиколотке",
         "images": [
-            "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sandals_myer.jpg",
-            "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sandals_myer_2.jpg"
+            "http://localhost:3000/img/products/sandals_myer.jpg",
+            "http://localhost:3000/img/products/sandals_myer_2.jpg"
         ],
         "sku": "1000046",
         "manufacturer": "PAUL ANDREW",
@@ -1272,8 +1272,8 @@
         "category": 13,
         "title": "Босоножки с резинкой",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/elasticated_sandals.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/elasticated_sandals_2.jpg"
+          "http://localhost:3000/img/products/elasticated_sandals.jpg",
+          "http://localhost:3000/img/products/elasticated_sandals_2.jpg"
         ],
         "sku": "1000047",
         "manufacturer": "ALCHIMIA DI BALLIN",
@@ -1299,8 +1299,8 @@
         "category": 14,
         "title": "Космические кроссовки",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/space_sneakers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/space_sneakers_2.jpg"
+          "http://localhost:3000/img/products/space_sneakers.jpg",
+          "http://localhost:3000/img/products/space_sneakers_2.jpg"
         ],
         "sku": "1000048",
         "manufacturer": "Nº21",
@@ -1326,8 +1326,8 @@
         "category": 13,
         "title": "Волосатые копытца",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/hairy_hooves.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/hairy_hooves_2.jpg"
+          "http://localhost:3000/img/products/hairy_hooves.jpg",
+          "http://localhost:3000/img/products/hairy_hooves_2.jpg"
         ],
         "sku": "1000049",
         "manufacturer": "MARNI",
@@ -1353,8 +1353,8 @@
         "category": 14,
         "title": "Бабушкины шлёпки",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/grandma's_flip_flops.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/grandma's_flip_flops_2.jpg"
+          "http://localhost:3000/img/products/grandma's_flip_flops.jpg",
+          "http://localhost:3000/img/products/grandma's_flip_flops_2.jpg"
         ],
         "sku": "1000050",
         "manufacturer": "MICHEL VIVIEN",
@@ -1380,8 +1380,8 @@
         "category": 14,
         "title": "Вьетнамки с ремешками",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip_flops_with_straps.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip_flops_with_straps_2.jpg"
+          "http://localhost:3000/img/products/flip_flops_with_straps.jpg",
+          "http://localhost:3000/img/products/flip_flops_with_straps_2.jpg"
         ],
         "sku": "1000051",
         "manufacturer": "TORY BURCH",
@@ -1408,8 +1408,8 @@
         "category": 12,
         "title": "Слипоны",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/slipons.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/slipons_2.jpg"
+          "http://localhost:3000/img/products/slipons.jpg",
+          "http://localhost:3000/img/products/slipons_2.jpg"
         ],
         "sku": "1000052",
         "manufacturer": "ALBUM DI FAMIGLIA",
@@ -1435,7 +1435,7 @@
         "category": 15,
         "title": "Супергеройские кеды",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/superhero_sneakers.jpg"
+          "http://localhost:3000/img/products/superhero_sneakers.jpg"
         ],
         "sku": "1000053",
         "manufacturer": "Vans",
@@ -1461,8 +1461,8 @@
         "category": 12,
         "title": "Футуристичные кроссовки",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/futuristic_sneakers.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/futuristic_sneakers_2.jpg"
+          "http://localhost:3000/img/products/futuristic_sneakers.jpg",
+          "http://localhost:3000/img/products/futuristic_sneakers_2.jpg"
         ],
         "sku": "1000054",
         "manufacturer": "NIKE",
@@ -1488,8 +1488,8 @@
         "category": 13,
         "title": "Сложная геометрия",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/complex_geometry.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/complex_geometry_2.jpg"
+          "http://localhost:3000/img/products/complex_geometry.jpg",
+          "http://localhost:3000/img/products/complex_geometry_2.jpg"
         ],
         "sku": "1000055",
         "manufacturer": "JACQUEMUS",
@@ -1515,7 +1515,7 @@
         "category": 13,
         "title": "Утро кондуктора",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/conductor's_morning.jpg"
+          "http://localhost:3000/img/products/conductor's_morning.jpg"
         ],
         "sku": "1000056",
         "manufacturer": "MARC ELLIS",
@@ -1542,8 +1542,8 @@
         "category": 13,
         "title": "Сапожки-трубы",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/boots-pipes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/boots-pipes_2.jpg"
+          "http://localhost:3000/img/products/boots-pipes.jpg",
+          "http://localhost:3000/img/products/boots-pipes_2.jpg"
         ],
         "sku": "1000057",
         "manufacturer": "MARC ELLIS",
@@ -1569,8 +1569,8 @@
         "category": 13,
         "title": "Ботильоны",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/ankle_boots.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/ankle_boots_2.jpg"
+          "http://localhost:3000/img/products/ankle_boots.jpg",
+          "http://localhost:3000/img/products/ankle_boots_2.jpg"
         ],
         "sku": "1000058",
         "manufacturer": "GIANVITO ROSSI",
@@ -1596,8 +1596,8 @@
         "category": 13,
         "title": "Сетчатая душа",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/mesh_soul.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/mesh_soul_2.jpg"
+          "http://localhost:3000/img/products/mesh_soul.jpg",
+          "http://localhost:3000/img/products/mesh_soul_2.jpg"
         ],
         "sku": "1000059",
         "manufacturer": "JIMMY CHOO",
@@ -1623,8 +1623,8 @@
         "category": 13,
         "title": "Розовая тигрица",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pink_tigress.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pink_tigress_2.jpg"
+          "http://localhost:3000/img/products/pink_tigress.jpg",
+          "http://localhost:3000/img/products/pink_tigress_2.jpg"
         ],
         "sku": "1000060",
         "manufacturer": "Nº21",
@@ -1651,8 +1651,8 @@
         "category": 13,
         "title": "Канатные туфли",
         "images": [
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/rope_shoes.jpg",
-          "https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/rope_shoes_2.jpg"
+          "http://localhost:3000/img/products/rope_shoes.jpg",
+          "http://localhost:3000/img/products/rope_shoes_2.jpg"
         ],
         "sku": "1000061",
         "manufacturer": "KAT MACONIE",
