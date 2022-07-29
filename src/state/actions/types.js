@@ -9,3 +9,13 @@ export const topSalesRequest = generateSubActions("topSalesRequest", [
   "success",
   "failure"
 ]);
+export const categoriesRequest = generateSubActions("categoriesRequest", [
+  "initiate",
+  "success",
+  "failure"
+]);
+export const itemsRequest = generateSubActions("itemsRequest", [
+  "proceed",
+  "success",
+  "failure"
+]);

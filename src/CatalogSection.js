@@ -1,98 +1,84 @@
+import classNames from "classnames";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useStateAccess from "./state/useStateAccess";
 
-const CatalogSection = () => {
+// This component operates when categories are already loaded
+const CategorySelector = ({ selectedCategoryId, setSelectedCategoryId, categoriesList }) => {
+  const mkOnClick = category => e => { e.preventDefault(); setSelectedCategoryId(category.id) };
+  const mkClass = category => classNames("nav-link", { active: category.id === selectedCategoryId });
+
+  const mkEntry = category => (
+    <li className="nav-item" key={category.id}>
+      <a className={mkClass(category)} href="#" onClick={mkOnClick(category)}>{category.title}</a>
+    </li>
+  );
   return (
-    // This is a template for now
+    <ul className="catalog-categories nav justify-content-center">
+      {mkEntry({ id: 0, title: "Все" })}
+      {categoriesList.map(mkEntry)}
+    </ul>
+  );
+};
+
+const CatalogSection = ({ enableSearch }) => {
+  const [selectedCategoryId, setSelectedCategoryId] = useState(0);
+  const { categoriesRequest, itemsRequest } = useStateAccess();
+
+  const loadMore = () => itemsRequest.proceed(selectedCategoryId, itemsRequest.state.loaded.length);
+  useEffect(() => {
+    if (!categoriesRequest.state.response) categoriesRequest.initiate();
+    itemsRequest.proceed(selectedCategoryId);
+  }, [selectedCategoryId]);
+
+  function renderInner() { // includes items and the "load more" button
+    const { status } = itemsRequest.state;
+    return <>
+      <div className="row">{itemsRequest.state.loaded.map(item =>
+        <div className="col-4" key={item.id}>
+          <div className="card catalog-item-card">
+            <img src={item.images[0]} className="card-img-top img-fluid" alt={item.title} />
+            <div className="card-body">
+              <p className="card-text">{item.title}</p>
+              <p className="card-text">{item.price.toLocaleString()} руб.</p>
+              <Link to={`/catalog/${+item.id}.html`} className="btn btn-outline-primary">Заказать</Link>
+            </div>
+          </div>
+        </div>
+      )}</div>
+
+      {status.loading && <div>Loading…</div>}
+      {!!status.error && <div>Error ({status.error.message})</div>}
+
+      {!itemsRequest.state.endReached && !itemsRequest.state.status.loading && (
+        <div className="text-center">
+          <button className="btn btn-outline-primary" onClick={loadMore}>Загрузить ещё</button>
+        </div>
+      )}
+    </>
+  }
+  function renderOuter() { // includes CategorySelector and renderInner
+    const categoriesStatus = categoriesRequest.state.status;
+    if (categoriesStatus.loading) return <div>Loading…</div>
+    if (categoriesStatus.error) return <div>Error ({categoriesStatus.error.message})</div>
+    if (!categoriesRequest.state.response) return;
+    return <>
+      <CategorySelector {...{
+        selectedCategoryId,
+        setSelectedCategoryId,
+        categoriesList: categoriesRequest.state.response
+      }} />
+      {renderInner()}
+    </>
+  }
+
+  return (
     <section className="catalog">
       <h2 className="text-center">Каталог</h2>
-      <ul className="catalog-categories nav justify-content-center">
-        <li className="nav-item">
-          <a className="nav-link active" href="#">Все</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Женская обувь</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Мужская обувь</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Обувь унисекс</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Детская обувь</a>
-        </li>
-      </ul>
-      <div className="row">
-        <div className="col-4">
-          <div className="card catalog-item-card">
-            <img src="./img/products/sandals_myer.jpg"
-              className="card-img-top img-fluid" alt="Босоножки 'MYER'" />
-            <div className="card-body">
-              <p className="card-text">Босоножки 'MYER'</p>
-              <p className="card-text">34 000 руб.</p>
-              <Link to="/products/1.html" className="btn btn-outline-primary">Заказать</Link>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="card catalog-item-card">
-            <img src="./img/products/sandals_keira.jpg"
-              className="card-img-top img-fluid" alt="Босоножки 'Keira'" />
-            <div className="card-body">
-              <p className="card-text">Босоножки 'Keira'</p>
-              <p className="card-text">7 600 руб.</p>
-              <Link to="/products/1.html" className="btn btn-outline-primary">Заказать</Link>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="card catalog-item-card">
-            <img src="./img/products/superhero_sneakers.jpg"
-              className="card-img-top img-fluid" alt="Супергеройские кеды" />
-            <div className="card-body">
-              <p className="card-text">Супергеройские кеды</p>
-              <p className="card-text">1 400 руб.</p>
-              <Link to="/products/1.html" className="btn btn-outline-primary">Заказать</Link>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="card catalog-item-card">
-            <img src="./img/products/sandals_myer.jpg"
-              className="card-img-top img-fluid" alt="Босоножки 'MYER'" />
-            <div className="card-body">
-              <p className="card-text">Босоножки 'MYER'</p>
-              <p className="card-text">34 000 руб.</p>
-              <Link to="/products/1.html" className="btn btn-outline-primary">Заказать</Link>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="card catalog-item-card">
-            <img src="./img/products/sandals_keira.jpg"
-              className="card-img-top img-fluid" alt="Босоножки 'Keira'" />
-            <div className="card-body">
-              <p className="card-text">Босоножки 'Keira'</p>
-              <p className="card-text">7 600 руб.</p>
-              <Link to="/products/1.html" className="btn btn-outline-primary">Заказать</Link>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="card catalog-item-card">
-            <img src="./img/products/superhero_sneakers.jpg"
-              className="card-img-top img-fluid" alt="Супергеройские кеды" />
-            <div className="card-body">
-              <p className="card-text">Супергеройские кеды</p>
-              <p className="card-text">1 400 руб.</p>
-              <Link to="/products/1.html" className="btn btn-outline-primary">Заказать</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="text-center">
-        <button className="btn btn-outline-primary">Загрузить ещё</button>
-      </div>
+      {enableSearch && <form className="catalog-search-form form-inline">
+        <input className="form-control" placeholder="Поиск" />
+      </form>}
+      {renderOuter()}
     </section>
   );
 };

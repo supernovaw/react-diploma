@@ -3,9 +3,13 @@ import { combineEpics, createEpicMiddleware } from "redux-observable";
 import epics from "./epics";
 
 import topSalesRequest from "./reducers/topSalesRequest";
+import categoriesRequest from "./reducers/categoriesRequest";
+import itemsRequest from "./reducers/itemsRequest";
 
 const reducers = combineReducers({
-  topSalesRequest
+  topSalesRequest,
+  categoriesRequest,
+  itemsRequest,
 });
 
 const epicMiddleware = createEpicMiddleware();
