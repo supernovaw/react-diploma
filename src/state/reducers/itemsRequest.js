@@ -6,14 +6,14 @@ const statusWait = () => ({ status: { loading: true, error: null } });
 const defaultState = {
   categoryId: 0,
   status: statusIdle(),
-  loaded: undefined
+  loaded: []
   // can have endReached: true
 };
 
 export default (state = defaultState, { type, payload }) => {
   if (!type.startsWith(types.BASE)) return state;
 
-  const categoryId = payload.categoryId || 0;
+  const categoryId = payload.categoryId;
   const clearLoaded = categoryId !== state.categoryId;
   const loadedPrev = (!clearLoaded && state.loaded) || [];
 

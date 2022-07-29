@@ -1,12 +1,12 @@
 import classNames from "classnames";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useStateAccess from "./state/useStateAccess";
 
-// This component operates when categories are already loaded
-const CategorySelector = ({ selectedCategoryId, setSelectedCategoryId, categoriesList }) => {
-  const mkOnClick = category => e => { e.preventDefault(); setSelectedCategoryId(category.id) };
-  const mkClass = category => classNames("nav-link", { active: category.id === selectedCategoryId });
+// CategorySelector operates when categories are already loaded
+const CategorySelector = ({ categoryId, onSetCategoryId, categoriesList }) => {
+  const mkOnClick = category => e => { e.preventDefault(); onSetCategoryId(category.id) };
+  const mkClass = category => classNames("nav-link", { active: category.id === categoryId });
 
   const mkEntry = category => (
     <li className="nav-item" key={category.id}>
@@ -22,14 +22,19 @@ const CategorySelector = ({ selectedCategoryId, setSelectedCategoryId, categorie
 };
 
 const CatalogSection = ({ enableSearch }) => {
-  const [selectedCategoryId, setSelectedCategoryId] = useState(0);
   const { categoriesRequest, itemsRequest } = useStateAccess();
+  const { categoryId } = itemsRequest.state;
 
-  const loadMore = () => itemsRequest.proceed(selectedCategoryId, itemsRequest.state.loaded.length);
+  const loadIfEmpty = forceCategory => {
+    if (itemsRequest.state.loaded.length === 0) itemsRequest.proceed(forceCategory || categoryId);
+  };
+  const onSetCategoryId = newId => { if (categoryId !== newId) itemsRequest.proceed(newId) };
+  const loadMore = () => { itemsRequest.proceed(categoryId, itemsRequest.state.loaded.length) };
   useEffect(() => {
-    if (!categoriesRequest.state.response) categoriesRequest.initiate();
-    itemsRequest.proceed(selectedCategoryId);
-  }, [selectedCategoryId]);
+    if (categoriesRequest.state.response) return;
+    categoriesRequest.initiate();
+    loadIfEmpty(0); // load category 0 by default
+  }, []);
 
   function renderInner() { // includes items and the "load more" button
     const { status } = itemsRequest.state;
@@ -64,8 +69,8 @@ const CatalogSection = ({ enableSearch }) => {
     if (!categoriesRequest.state.response) return;
     return <>
       <CategorySelector {...{
-        selectedCategoryId,
-        setSelectedCategoryId,
+        categoryId,
+        onSetCategoryId,
         categoriesList: categoriesRequest.state.response
       }} />
       {renderInner()}
