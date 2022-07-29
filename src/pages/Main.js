@@ -4,7 +4,6 @@ import CatalogSection from "../CatalogSection";
 
 const Main = () => {
   return (
-    // This is a template for now
     <main className="container">
       <div className="row">
         <div className="col">
