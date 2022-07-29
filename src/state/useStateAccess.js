@@ -17,7 +17,7 @@ export default function useStateAccess() {
     },
     itemsRequest: {
       state: entireState.itemsRequest,
-      proceed: (categoryId, offset) => dispatch(itemsRequestCreators.proceed(categoryId, offset))
+      proceed: (categoryId, offset, search) => dispatch(itemsRequestCreators.proceed(categoryId, offset, search))
     },
   };
 }

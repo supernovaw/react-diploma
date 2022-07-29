@@ -1,9 +1,18 @@
 import { useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default () => {
+  const navigate = useNavigate();
   const searchFormRef = useRef(null);
-  const toggleSearchForm = () => searchFormRef.current.classList.toggle("invisible");
+  const toggleSearchForm = () => {
+    const el = searchFormRef.current;
+    el.classList.toggle("invisible");
+
+    const text = el.children[0].value;
+    if (text === '') return;
+    navigate("/catalog.html?" + new URLSearchParams({ search: text }));
+    el.children[0].value = '';
+  };
 
   return (
     <header className="container">
@@ -27,7 +36,7 @@ export default () => {
                 <div className="header-controls-cart-menu" />
               </NavLink>
             </div>
-            <form data-id="search-form" ref={searchFormRef}
+            <form data-id="search-form" ref={searchFormRef} onSubmit={e => { e.preventDefault(); toggleSearchForm() }}
               className="header-controls-search-form form-inline invisible">
               <input className="form-control" placeholder="Поиск" />
             </form>

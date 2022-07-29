@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useStateAccess from "./state/useStateAccess";
 
 // CategorySelector operates when categories are already loaded
@@ -22,22 +22,41 @@ const CategorySelector = ({ categoryId, onSetCategoryId, categoriesList }) => {
 };
 
 const CatalogSection = ({ enableSearch }) => {
+  const navigate = useNavigate();
+  const searchQuery = new URLSearchParams(useLocation().search).get("search");
+  const searchInputRef = useRef(null);
+  const onSearch = e => {
+    e.preventDefault();
+    const text = e.target.children[0].value;
+    if (text === '') { navigate("/catalog.html"); return }
+    navigate("/catalog.html?" + new URLSearchParams({ search: text }));
+  };
+
   const { categoriesRequest, itemsRequest } = useStateAccess();
   const { categoryId } = itemsRequest.state;
 
-  const loadIfEmpty = forceCategory => {
-    if (itemsRequest.state.loaded.length === 0) itemsRequest.proceed(forceCategory || categoryId);
-  };
-  const onSetCategoryId = newId => { if (categoryId !== newId) itemsRequest.proceed(newId) };
-  const loadMore = () => { itemsRequest.proceed(categoryId, itemsRequest.state.loaded.length) };
+  const onSetCategoryId = newId => { if (categoryId !== newId) itemsRequest.proceed(newId, 0, searchQuery) };
+  const loadMore = () => { itemsRequest.proceed(categoryId, itemsRequest.state.loaded.length, searchQuery) };
   useEffect(() => {
-    if (categoriesRequest.state.response) return;
-    categoriesRequest.initiate();
-    loadIfEmpty(0); // load category 0 by default
+    if (!categoriesRequest.state.response) {
+      categoriesRequest.initiate();
+    }
+    /* (Re)load items if:
+     *  > none are present
+     *  > existing ones were loaded with a different search query */
+    if (itemsRequest.state.loaded.length === 0 || itemsRequest.state.usedSearchFilter !== searchQuery) {
+      itemsRequest.proceed(0, 0, searchQuery); // category 0, offset 0 by default
+    }
   }, []);
+  useEffect(() => { // react to a new search being entered
+    if (!enableSearch) return;
+    searchInputRef.current.value = searchQuery;
+    if (searchQuery !== itemsRequest.state.usedSearchFilter) itemsRequest.proceed(categoryId, 0, searchQuery);
+  }, [searchQuery]);
 
   function renderInner() { // includes items and the "load more" button
     const { status } = itemsRequest.state;
+    const displayNoneFound = !status.loading && !status.error && !itemsRequest.state.loaded.length;
     return <>
       <div className="row">{itemsRequest.state.loaded.map(item =>
         <div className="col-4" key={item.id}>
@@ -54,6 +73,7 @@ const CatalogSection = ({ enableSearch }) => {
 
       {status.loading && <div>Loading…</div>}
       {!!status.error && <div>Error ({status.error.message})</div>}
+      {displayNoneFound && <div>Nothing was found</div>}
 
       {!itemsRequest.state.endReached && !itemsRequest.state.status.loading && (
         <div className="text-center">
@@ -80,8 +100,8 @@ const CatalogSection = ({ enableSearch }) => {
   return (
     <section className="catalog">
       <h2 className="text-center">Каталог</h2>
-      {enableSearch && <form className="catalog-search-form form-inline">
-        <input className="form-control" placeholder="Поиск" />
+      {enableSearch && <form className="catalog-search-form form-inline" onSubmit={onSearch}>
+        <input className="form-control" placeholder="Поиск" ref={searchInputRef} />
       </form>}
       {renderOuter()}
     </section>

@@ -18,7 +18,7 @@ export default action$ => action$.pipe(
   ofType(types.proceed),
   map(action => action.payload),
   switchMap(
-    ({ categoryId, offset }) => ajax.getJSON(url + params({ categoryId, offset })).pipe(
+    ({ categoryId, offset, search }) => ajax.getJSON(url + params({ categoryId, offset, q: search })).pipe(
       retry(1),
       map(response => creators.success(categoryId, response)),
       catchError(error => of(creators.failure(categoryId, error)))
