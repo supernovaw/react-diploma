@@ -14,7 +14,8 @@ export default (state = defaultState, { type, payload }) => {
   if (!type.startsWith(types.BASE)) return state;
 
   const categoryId = payload.categoryId;
-  const clearLoaded = categoryId !== state.categoryId || (payload.search !== state.usedSearchFilter);
+  // payload.search and state.usedSearchFilter can be undefined and null respectively, != instead of !== is important
+  const clearLoaded = categoryId !== state.categoryId || (payload.search != state.usedSearchFilter);
   const loadedPrev = (!clearLoaded && state.loaded) || [];
 
   switch (type) {
