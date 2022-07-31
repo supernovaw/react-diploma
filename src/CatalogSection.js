@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { formatMoney } from ".";
 import useStateAccess from "./state/useStateAccess";
 
 // CategorySelector operates when categories are already loaded
@@ -64,7 +65,7 @@ const CatalogSection = ({ enableSearch }) => {
             <img src={item.images[0]} className="card-img-top img-fluid" alt={item.title} />
             <div className="card-body">
               <p className="card-text">{item.title}</p>
-              <p className="card-text">{item.price.toLocaleString()} руб.</p>
+              <p className="card-text">{formatMoney(item.price)}</p>
               <Link to={`/catalog/${+item.id}.html`} className="btn btn-outline-primary">Заказать</Link>
             </div>
           </div>

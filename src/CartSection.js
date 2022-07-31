@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { formatMoney } from ".";
 import { cart } from "./state/persistent";
 import useStateAccess from "./state/useStateAccess";
 
@@ -18,8 +19,8 @@ const CartSection = () => {
       <td><Link to={`/catalog/${entry.id}.html`}>{entry.name}</Link></td>
       <td>{entry.size}</td>
       <td>{entry.count}</td>
-      <td>{entry.price.toLocaleString()} руб.</td>
-      <td>{(entry.price * entry.count).toLocaleString()} руб.</td>
+      <td>{formatMoney(entry.price)}</td>
+      <td>{formatMoney(entry.price * entry.count)}</td>
       <td><button className="btn btn-outline-danger btn-sm" onClick={() => onRemove(entry)}>Удалить</button></td>
     </tr>
   );
@@ -35,7 +36,7 @@ const CartSection = () => {
         {entries.map(renderRow)}
         <tr>
           <td colSpan={5} className="text-right">Общая стоимость</td>
-          <td>{totalSum.toLocaleString()} руб.</td>
+          <td>{formatMoney(totalSum)}</td>
         </tr>
       </tbody>
     </table>

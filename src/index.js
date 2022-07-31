@@ -10,3 +10,7 @@ root.render(
     <App />
   </Provider>
 );
+
+export function formatMoney(amount) {
+  return amount.toLocaleString() + " руб.";
+}

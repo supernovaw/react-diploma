@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { formatMoney } from ".";
 import useStateAccess from "./state/useStateAccess";
 
 const Item = ({ item }) => (
@@ -9,7 +10,7 @@ const Item = ({ item }) => (
         className="card-img-top img-fluid" alt={item.title} />
       <div className="card-body">
         <p className="card-text">{item.title}</p>
-        <p className="card-text">{item.price.toLocaleString()} руб.</p>
+        <p className="card-text">{formatMoney(item.price)}</p>
         <Link to={`/catalog/${+item.id}.html`} className="btn btn-outline-primary">Заказать</Link>
       </div>
     </div>
