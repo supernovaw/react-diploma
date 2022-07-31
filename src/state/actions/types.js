@@ -19,3 +19,8 @@ export const itemsRequest = generateSubActions("itemsRequest", [
   "success",
   "failure"
 ]);
+export const itemDetailsRequest = generateSubActions("itemDetailsRequest", [
+  "initiate",
+  "success",
+  "failure"
+]);

@@ -5,11 +5,13 @@ import epics from "./epics";
 import topSalesRequest from "./reducers/topSalesRequest";
 import categoriesRequest from "./reducers/categoriesRequest";
 import itemsRequest from "./reducers/itemsRequest";
+import itemDetailsRequest from "./reducers/itemDetailsRequest";
 
 const reducers = combineReducers({
   topSalesRequest,
   categoriesRequest,
   itemsRequest,
+  itemDetailsRequest,
 });
 
 const epicMiddleware = createEpicMiddleware();
