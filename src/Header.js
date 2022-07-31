@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import useStateAccess from "./state/useStateAccess";
 
 export default () => {
   const navigate = useNavigate();
@@ -13,6 +14,12 @@ export default () => {
     navigate("/catalog.html?" + new URLSearchParams({ search: text }));
     el.children[0].value = '';
   };
+  const cartCount = useStateAccess().cartCount.state;
+  const cartIndicator = !!cartCount && (
+    <div className="header-controls-cart-full">
+      {cartCount > 99 ? "99+" : cartCount.toString()}
+    </div>
+  );
 
   return (
     <header className="container">
@@ -32,7 +39,7 @@ export default () => {
               <div data-id="search-expander" onClick={toggleSearchForm}
                 className="header-controls-pic header-controls-search" />
               <NavLink className="header-controls-pic header-controls-cart" to="/cart.html">
-                <div className="header-controls-cart-full">1</div>
+                {cartIndicator}
                 <div className="header-controls-cart-menu" />
               </NavLink>
             </div>

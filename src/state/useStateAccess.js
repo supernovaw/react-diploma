@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
+import * as types from "./actions/types";
+
 import topSalesRequestCreators from "./actions/topSalesRequestCreators";
 import categoriesRequestCreators from "./actions/categoriesRequestCreators";
 import itemsRequestCreators from "./actions/itemsRequestCreators";
@@ -23,6 +25,10 @@ export default function useStateAccess() {
     itemDetailsRequest: {
       state: entireState.itemDetailsRequest,
       initiate: id => dispatch(itemDetailsRequestCreators.initiate(id))
+    },
+    cartCount: {
+      state: entireState.cartCount,
+      update: () => dispatch({ type: types.cartCount.update })
     },
   };
 }

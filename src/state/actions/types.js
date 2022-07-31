@@ -24,3 +24,4 @@ export const itemDetailsRequest = generateSubActions("itemDetailsRequest", [
   "success",
   "failure"
 ]);
+export const cartCount = generateSubActions("cartCount", ["update"]);

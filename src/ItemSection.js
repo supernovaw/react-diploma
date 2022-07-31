@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useStateAccess from "./state/useStateAccess";
+import { cart } from "./state/persistent";
 
 const propertiesNames = {
   sku: "Артикул",
@@ -37,7 +38,7 @@ const renderItemPropertiesTable = details => (
 const ItemSection = () => {
   const id = +useParams().id;
   const navigate = useNavigate();
-  const { itemDetailsRequest, itemsRequest, topSalesRequest } = useStateAccess();
+  const { itemDetailsRequest, itemsRequest, topSalesRequest, cartCount } = useStateAccess();
 
   const [selectedSize, selectSize] = useState();
   const [selectedCount, selectCount] = useState(1);
@@ -47,6 +48,13 @@ const ItemSection = () => {
   const earlyDetails = getEarlyDetails(id, itemsRequest, topSalesRequest);
   const details = itemDetailsRequest.state[id]?.response;
   useEffect(() => { if (!details) itemDetailsRequest.initiate(id) }, [id]);
+
+  function addToCart() {
+    if (!selectedSize) return;
+    cart.add(id, selectedSize, details.price, selectedCount, (details || earlyDetails).title);
+    cartCount.update();
+    navigate("/cart.html");
+  }
 
   if (!details && !earlyDetails) { // here, display request status WHEN NO earlyDetails are present
     if (!itemDetailsRequest.state[id]) return;
@@ -90,7 +98,7 @@ const ItemSection = () => {
           </p>
         </div>
         <button className="btn btn-danger btn-block btn-lg"
-          hidden={!isSizeSelected} onClick={() => navigate("/cart.html")}>В корзину</button>
+          hidden={!isSizeSelected} onClick={addToCart}>В корзину</button>
       </div>
     );
   }

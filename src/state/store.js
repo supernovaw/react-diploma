@@ -6,12 +6,14 @@ import topSalesRequest from "./reducers/topSalesRequest";
 import categoriesRequest from "./reducers/categoriesRequest";
 import itemsRequest from "./reducers/itemsRequest";
 import itemDetailsRequest from "./reducers/itemDetailsRequest";
+import cartCount from "./reducers/cartCount";
 
 const reducers = combineReducers({
   topSalesRequest,
   categoriesRequest,
   itemsRequest,
   itemDetailsRequest,
+  cartCount,
 });
 
 const epicMiddleware = createEpicMiddleware();
