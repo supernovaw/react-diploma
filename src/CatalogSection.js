@@ -63,7 +63,10 @@ const CatalogSection = ({ enableSearch }) => {
       <div className="row">{itemsRequest.state.loaded.map(item =>
         <div className="col-4" key={item.id}>
           <div className="card catalog-item-card">
-            <img src={item.images[0]} className="card-img-top img-fluid" alt={item.title} />
+            <div style={{ aspectRatio: 0.8, overflow: "hidden" }}>
+              <img src={item.images[0]} className="card-img-top img-fluid"
+                alt={item.title} style={{ position: "relative", top: "50%", transform: "translateY(-50%)" }} />
+            </div>
             <div className="card-body">
               <p className="card-text">{item.title}</p>
               <p className="card-text">{formatMoney(item.price)}</p>
