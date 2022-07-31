@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { formatMoney } from ".";
+import Loader from "./Loader";
 import useStateAccess from "./state/useStateAccess";
 
 // CategorySelector operates when categories are already loaded
@@ -72,22 +73,20 @@ const CatalogSection = ({ enableSearch }) => {
         </div>
       )}</div>
 
-      {status.loading && <div>Loading…</div>}
-      {!!status.error && <div>Error ({status.error.message})</div>}
-      {displayNoneFound && <div>Nothing was found</div>}
+      <Loader type="2" loading={status.loading} error={status.error} retry={loadMore} />
+      {displayNoneFound && <div>По запросу "{searchQuery}" не было ничего найдено</div>}
 
       {!itemsRequest.state.endReached && !itemsRequest.state.status.loading && (
         <div className="text-center">
-          <button className="btn btn-outline-primary" onClick={loadMore}>Загрузить ещё</button>
+          <button className="btn btn-outline-primary" onClick={loadMore} hidden={!!status.error}>Загрузить ещё</button>
         </div>
       )}
     </>
   }
   function renderOuter() { // includes CategorySelector and renderInner
-    const categoriesStatus = categoriesRequest.state.status;
-    if (categoriesStatus.loading) return <div>Loading…</div>
-    if (categoriesStatus.error) return <div>Error ({categoriesStatus.error.message})</div>
-    if (!categoriesRequest.state.response) return;
+    if (!categoriesRequest.state.response) return (
+      <Loader type="2" {...categoriesRequest.state.status} retry={categoriesRequest.initiate} />
+    );
     return <>
       <CategorySelector {...{
         categoryId,

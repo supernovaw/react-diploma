@@ -47,7 +47,7 @@ const CartSection = () => {
     <section className="cart">
       <h2 className="text-center">Корзина</h2>
       {entries.length === 0 ?
-        <div hidden={successfulOrder}>Your cart is empty</div>
+        <div hidden={successfulOrder}>Вы пока не добавили ничего в корзину.</div>
         :
         renderTable()
       }

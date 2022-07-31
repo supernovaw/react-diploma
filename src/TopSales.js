@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { formatMoney } from ".";
+import Loader from "./Loader";
 import useStateAccess from "./state/useStateAccess";
 
 const Item = ({ item }) => (
@@ -21,20 +22,16 @@ const TopSales = () => {
   const { state, initiate: initiateRequest } = useStateAccess().topSalesRequest;
   useEffect(() => { initiateRequest() }, []);
 
-  const displayLoading = state.status.loading;
-  const displayError = !displayLoading && !!state.status.error;
-  const displayData = !displayLoading && !displayError && !!state.response && state.response.length > 0;
+  const dataPresent = state.response?.length > 0;
+  const noDataConfirmed = !dataPresent && !state.status.loading && !state.status.error;
 
-  const displayNothing = !displayLoading && !displayError && !displayData;
-  return displayNothing || (
+  return !noDataConfirmed && (
     <div>
-      {displayLoading && <div>Loading…</div>}
-      {displayError && <div>Error: {state.status.error.message}</div>}
-
-      {displayData && <section className="top-sales">
+      <Loader type="1" {...state.status} retry={initiateRequest} />
+      {dataPresent && <section className="top-sales">
         <h2 className="text-center">Хиты продаж!</h2>
         <div className="row">
-          {displayData && state.response.map(item => <Item item={item} key={item.id} />)}
+          {state.response.map(item => <Item item={item} key={item.id} />)}
         </div>
       </section>}
     </div>

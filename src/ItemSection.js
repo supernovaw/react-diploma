@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useStateAccess from "./state/useStateAccess";
 import { cart } from "./state/persistent";
+import Loader from "./Loader";
 
 const propertiesNames = {
   sku: "Артикул",
@@ -56,19 +57,21 @@ const ItemSection = () => {
     navigate("/cart.html");
   }
 
-  if (!details && !earlyDetails) { // here, display request status WHEN NO earlyDetails are present
-    if (!itemDetailsRequest.state[id]) return;
+  if (!details && !earlyDetails) { // here, display request status WHEN NO earlyDetails are present (empty page)
+    if (!itemDetailsRequest.state[id]) return; // 1st render only
     const status = itemDetailsRequest.state[id].status;
-    if (status.loading) return <div>Loading…</div>
-    if (status.error) return <div>Error ({status.error.message})</div>
+    if (status.loading || status.error) return (
+      <Loader type="3" {...status} retry={() => itemDetailsRequest.initiate(id)} />
+    );
   }
 
   function renderMainPart() {
-    // here, display request status WHEN earlyDetails are present
+    // here, display request status WHEN earlyDetails are present (title and picture on the left are shown)
     if (!itemDetailsRequest.state[id]) return;
     const status = itemDetailsRequest.state[id].status;
-    if (status.loading) return <div>Loading…</div>
-    if (status.error) return <div>Error ({status.error.message})</div>
+    if (status.loading || status.error) return (
+      <Loader type="3" {...status} retry={() => itemDetailsRequest.initiate(id)} />
+    );
 
     const sizes = details.sizes.filter(s => s.available || s.avalible).map(s => s.size);
     const isSizeSelected = sizes.includes(selectedSize);
