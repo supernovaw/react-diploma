@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { formatMoney } from ".";
 import { cart } from "./state/persistent";
 import useStateAccess from "./state/useStateAccess";
 
 const CartSection = () => {
+  const successfulOrder = new URLSearchParams(useLocation().search).get("successful_order") === "true";
   const entries = cart.get();
   const totalSum = entries.map(e => e.price * e.count).reduce((a, b) => a + b, 0);
 
@@ -46,7 +47,7 @@ const CartSection = () => {
     <section className="cart">
       <h2 className="text-center">Корзина</h2>
       {entries.length === 0 ?
-        <div>Your cart is empty</div>
+        <div hidden={successfulOrder}>Your cart is empty</div>
         :
         renderTable()
       }

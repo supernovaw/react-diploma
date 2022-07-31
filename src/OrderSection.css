@@ -1,0 +1,16 @@
+section.order .run-animation {
+  animation: shake-horizontal 0.6s;
+}
+
+section.order .run-animation>input {
+  color: inherit;
+}
+
+@keyframes shake-horizontal {
+  0% { transform: translateX(0); color: unset; }
+  20% { transform: translateX(0.25rem); color: #a12138; }
+  40% { transform: translateX(-0.25rem); }
+  60% { transform: translateX(0.25rem); }
+  80% { transform: translateX(-0.25rem); color: #a12138; }
+  100% { transform: translateX(0); color: unset; }
+}

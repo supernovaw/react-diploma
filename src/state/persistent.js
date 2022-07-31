@@ -5,6 +5,7 @@ const match = (id, size, _) => entry => entry.id === id && entry.size === size;
 const matchInv = (id, size) => entry => entry.id !== id || entry.size !== size;
 const parseCart = () => { if (!cartShadow) cartShadow = JSON.parse(localStorage.getItem("cart") || "[]") };
 const writeCart = () => { localStorage.setItem("cart", JSON.stringify(cartShadow)) };
+const resetCart = () => { localStorage.removeItem("cart") };
 
 const cart = {
   get: function () {
@@ -29,6 +30,10 @@ const cart = {
     parseCart();
     cartShadow = cartShadow.filter(matchInv(id, size));
     writeCart();
+  },
+  clear: function () {
+    cartShadow = [];
+    resetCart();
   }
 };
 
