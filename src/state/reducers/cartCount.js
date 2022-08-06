@@ -5,7 +5,7 @@
 import { cartCount as types } from "../actions/types";
 import { cart } from "../persistent";
 
-const getCount = () => cart.get().length;
+const getCount = () => cart.get().length || 0;
 
 export default (state = getCount(), { type }) => {
   if (!type.startsWith(types.BASE)) return state;
